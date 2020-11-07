@@ -3,8 +3,8 @@ import NormaliseCss from "./components/NormaliseCss";
 import ResetCss from "./components/ResetCss";
 import GlobalCss from "./components/GlobalCss";
 
-import { A, Mark, Blockquote, Pre } from "./components/Scaffolding";
-import { H1, H2, H3, H4, H5 } from "./components";
+import { A, Mark, Blockquote } from "./components/Scaffolding";
+import { H1, H2, H3, H4, H5, Container, Section, CodeBlock, KeyboardCmd, InlineCode } from "./components";
 
 function App() {
   return (
@@ -13,23 +13,23 @@ function App() {
       <NormaliseCss />
       <ResetCss />
       <main>
-        <div className="small-container">
+        <Container size="medium">
           <H1>HTML5 Element Test Page</H1>
           <p>Common HTML5 elements for CSS testing purposes.</p>
 
           <H1>Formatting</H1>
 
           <p>
-            This sentence is <b>bold</b>. If you like semantics, you might go with
-            <strong>strong</strong> or <em>emphasized</em> text. If not, <i>italic</i> is still around.{" "}
-            <small>Small</small> text is for fine print. Your copy can also be
-            <sub>subscripted</sub> and <sup>superscripted</sup>, <ins>inserted</ins>,<del>deleted</del>, or{" "}
-            <Mark>highlighted</Mark>. You would use a <A href="#!">hyperlink</A> to go to a new page.
+            This sentence is <b>bold</b>. If you like semantics, you might go with <strong>strong</strong> or{" "}
+            <em>emphasized</em> text. If not, <i>italic</i> is still around. <small>Small</small> text is for fine
+            print. Your copy can also be <sub>subscripted</sub> and <sup>superscripted</sup>, <ins>inserted</ins>,
+            <del>deleted</del>, or <Mark>highlighted</Mark>. You would use a <A href="#!">hyperlink</A> to go to a new
+            page.
           </p>
           <p>
-            If you like to write about there are plenty of semantic tags for you. There's the generic
-            <code>code</code>, as well as <kbd>keyboard input</kbd>, <samp>computer output</samp>, and
-            <var>variables</var>.
+            If you like to write about there are plenty of semantic tags for you. There's the generic{" "}
+            <InlineCode>code</InlineCode>, as well as <KeyboardCmd>keyboard input</KeyboardCmd>,{" "}
+            <samp>computer output</samp>, and <var>variables</var>.
           </p>
           <p>
             You might have need of a <cite>citation</cite>, <q>short quotation</q>,<abbr>abbreviation</abbr>, or{" "}
@@ -42,23 +42,25 @@ function App() {
             </p>
           </address>
 
-          <H2>Blockquote</H2>
+          <Section>
+            <H2>Blockquote</H2>
 
-          <Blockquote>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam molestiae et assumenda molestias alias
-            ut saepe doloribus, porro, deleniti neque, harum minus, commodi laudantium quod excepturi nam corrupti odit
-            provident.
-            <cite>- Blockquote Citation</cite>
-          </Blockquote>
+            <Blockquote>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam molestiae et assumenda molestias alias
+              ut saepe doloribus, porro, deleniti neque, harum minus, commodi laudantium quod excepturi nam corrupti
+              odit provident.
+              <cite>- Blockquote Citation</cite>
+            </Blockquote>
+          </Section>
 
           <H2>Preformatted Text</H2>
-          <Pre>
+          <CodeBlock>
             {`class Voila {
 public:
   // Voila
   static const string VOILA = "Voila";
 }`}
-          </Pre>
+          </CodeBlock>
           <H2>Horizontal Line</H2>
 
           <hr />
@@ -191,13 +193,13 @@ public:
               <option>Option Three</option>
             </select>
             <label htmlFor="checkbox1">
-              <input id="checkbox1" name="checkbox" type="checkbox" checked /> Choice A
+              <input id="checkbox1" name="checkbox" type="checkbox" defaultChecked /> Choice A
             </label>
             <label htmlFor="checkbox2">
               <input id="checkbox2" name="checkbox" type="checkbox" /> Choice B
             </label>
             <label htmlFor="radio1">
-              <input id="radio1" name="radio" type="radio" className="radio" checked /> Option 1
+              <input id="radio1" name="radio" type="radio" className="radio" defaultChecked /> Option 1
             </label>
             <label htmlFor="radio2">
               <input id="radio2" name="radio" type="radio" className="radio" /> Option 2
@@ -231,7 +233,7 @@ public:
               <A href="https://www.taniarascia.com">Tania Rascia</A>.
             </p>
           </footer>
-        </div>
+        </Container>
       </main>
     </>
   );
