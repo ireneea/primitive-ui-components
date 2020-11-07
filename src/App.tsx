@@ -3,7 +3,7 @@ import NormaliseCss from "./components/NormaliseCss";
 import ResetCss from "./components/ResetCss";
 import GlobalCss from "./components/GlobalCss";
 
-import { A, Mark, Blockquote } from "./components/Scaffolding";
+import { Link, Highlight, Blockquote } from "./components/Scaffolding";
 import { H1, H2, H3, H4, H5, Container, Section, CodeBlock, KeyboardCmd, InlineCode } from "./components";
 
 function App() {
@@ -23,8 +23,8 @@ function App() {
             This sentence is <b>bold</b>. If you like semantics, you might go with <strong>strong</strong> or{" "}
             <em>emphasized</em> text. If not, <i>italic</i> is still around. <small>Small</small> text is for fine
             print. Your copy can also be <sub>subscripted</sub> and <sup>superscripted</sup>, <ins>inserted</ins>,
-            <del>deleted</del>, or <Mark>highlighted</Mark>. You would use a <A href="#!">hyperlink</A> to go to a new
-            page.
+            <del>deleted</del>, or <Highlight>highlighted</Highlight>. You would use a <Link href="#!">hyperlink</Link>{" "}
+            to go to a new page.
           </p>
           <p>
             If you like to write about there are plenty of semantic tags for you. There's the generic{" "}
@@ -226,11 +226,11 @@ public:
           <footer>
             <p>
               Made to test
-              <A href="https://taniarascia.github.io/primitive/" target="_blank">
+              <Link href="https://taniarascia.github.io/primitive/" target="_blank">
                 Primitive
-              </A>{" "}
+              </Link>{" "}
               by
-              <A href="https://www.taniarascia.com">Tania Rascia</A>.
+              <Link href="https://www.taniarascia.com">Tania Rascia</Link>.
             </p>
           </footer>
         </Container>

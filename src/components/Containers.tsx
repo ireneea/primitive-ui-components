@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import theme, { PrimeTheme } from "./themes";
+import { PrimeTheme, withDefaultTheme } from "./themes";
 import { baseFont } from "./mixins";
 
 interface ContainerProps {
@@ -7,7 +7,7 @@ interface ContainerProps {
   size?: "small" | "medium" | "large" | "full";
 }
 
-export const Container = styled.div<ContainerProps>`
+const StyledDiv = styled.div<ContainerProps>`
   ${baseFont}
   max-width: ${(props) => {
     let maxWidth;
@@ -37,11 +37,11 @@ export const Container = styled.div<ContainerProps>`
         `}
 `;
 
-Container.defaultProps = { theme: { ...theme } };
+export const Container = withDefaultTheme(StyledDiv);
 
-export const Section = styled.section`
+const StyledSection = styled.section`
   ${baseFont}
   padding: ${(props) => props.theme.spacing.contentPaddingMobile};
 `;
 
-Section.defaultProps = { theme: { ...theme } };
+export const Section = withDefaultTheme(StyledSection);

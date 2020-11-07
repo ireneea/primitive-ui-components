@@ -1,5 +1,5 @@
 import styled, { AnyStyledComponent } from "styled-components";
-import theme from "./themes";
+import { withDefaultTheme } from "./themes";
 import { baseFont } from "./mixins";
 
 function setHeader(level: number) {
@@ -21,17 +21,16 @@ function setHeader(level: number) {
       }
     `;
 
-    styledHeader.defaultProps = { theme: { ...theme } };
     return styledHeader;
   };
 }
 
-export const H1 = setHeader(1)(styled.h1``);
+export const H1 = withDefaultTheme(setHeader(1)(styled.h1``));
 
-export const H2 = setHeader(2)(styled.h2``);
+export const H2 = withDefaultTheme(setHeader(2)(styled.h2``));
 
-export const H3 = setHeader(3)(styled.h3``);
+export const H3 = withDefaultTheme(setHeader(3)(styled.h3``));
 
-export const H4 = setHeader(4)(styled.h4``);
+export const H4 = withDefaultTheme(setHeader(4)(styled.h4``));
 
-export const H5 = setHeader(5)(styled.h5``);
+export const H5 = withDefaultTheme(setHeader(5)(styled.h5``));

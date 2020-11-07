@@ -1,9 +1,8 @@
 import styled from "styled-components";
-import theme from "./themes";
+import { withDefaultTheme } from "./themes";
 import { baseFont } from "./mixins";
 
-// Link
-export const A = styled.a`
+const StyledA = styled.a`
   ${baseFont}
   color: ${(props) => props.theme.colors.link};
   text-decoration: none;
@@ -16,19 +15,17 @@ export const A = styled.a`
   }
 `;
 
-A.defaultProps = { theme: { ...theme } };
+export const Link = withDefaultTheme(StyledA);
 
-// Highlight
-export const Mark = styled.mark`
+const StyledMark = styled.mark`
   ${baseFont}
   background: ${(props) => props.theme.colors.highlight};
   padding: 0 0.2rem;
 `;
 
-Mark.defaultProps = { theme: { ...theme } };
+export const Highlight = withDefaultTheme(StyledMark);
 
-// Blockquote
-export const Blockquote = styled.blockquote`
+const StyledBlockquote = styled.blockquote`
   ${baseFont}
   margin: 0 0 ${(props) => props.theme.spacing.margins} 0;
   border-left: ${(props) => props.theme.colors.bqBorder};
@@ -43,4 +40,4 @@ export const Blockquote = styled.blockquote`
   }
 `;
 
-Blockquote.defaultProps = { theme: { ...theme } };
+export const Blockquote = withDefaultTheme(StyledBlockquote);
