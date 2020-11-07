@@ -3,8 +3,22 @@ import NormaliseCss from "./components/NormaliseCss";
 import ResetCss from "./components/ResetCss";
 import GlobalCss from "./components/GlobalCss";
 
-import { Link, Highlight, Blockquote } from "./components/Scaffolding";
-import { H1, H2, H3, H4, H5, Container, Section, CodeBlock, KeyboardCmd, InlineCode } from "./components";
+import {
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  Container,
+  Section,
+  CodeBlock,
+  KeyboardCmd,
+  InlineCode,
+  Link,
+  Highlight,
+  Blockquote,
+  Divider,
+} from "./components";
 
 function App() {
   return (
@@ -63,7 +77,7 @@ public:
           </CodeBlock>
           <H2>Horizontal Line</H2>
 
-          <hr />
+          <Divider />
 
           <H1>Headings</H1>
 

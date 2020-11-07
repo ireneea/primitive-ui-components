@@ -41,3 +41,11 @@ const StyledBlockquote = styled.blockquote`
 `;
 
 export const Blockquote = withDefaultTheme(StyledBlockquote);
+
+const StyledHr = styled.hr`
+  height: 0;
+  border: 0;
+  border-top: ${(props) => props.theme.borders.borders};
+`;
+
+export const Divider = withDefaultTheme(StyledHr);
