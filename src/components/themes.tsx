@@ -19,6 +19,10 @@ export interface PrimeTheme {
   spacing: Record<string, string>;
   borders: Record<string, string>;
   code: Record<string, string>;
+  sizes: Record<string, string>;
+  mobileBreakPoint: string;
+  tabletBreakPoint: string;
+  desktopBreakPoint: string;
 }
 
 const theme: PrimeTheme = {
@@ -87,6 +91,21 @@ const theme: PrimeTheme = {
     fontSize: "14px",
     fontFamily: "Menlo, monospace",
     backgroundColor: "transparent",
+  },
+  sizes: {
+    xSmall: "600px",
+    small: "800px",
+    medium: "1000px",
+    large: "1200px",
+  },
+  get mobileBreakPoint() {
+    return `(min-width: ${this.sizes.xSmall})`;
+  },
+  get tabletBreakPoint() {
+    return `(min-width: ${this.sizes.small})`;
+  },
+  get desktopBreakPoint() {
+    return `(min-width: ${this.sizes.medium})`;
   },
 };
 
