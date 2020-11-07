@@ -1,25 +1,30 @@
 import React from "react";
 import NormaliseCss from "./components/NormaliseCss";
 import ResetCss from "./components/ResetCss";
+import GlobalCss from "./components/GlobalCss";
+
+import { A, Mark, Blockquote, Pre } from "./components/Scaffolding";
+import { H1, H2, H3, H4, H5 } from "./components";
 
 function App() {
   return (
     <>
+      <GlobalCss />
       <NormaliseCss />
       <ResetCss />
       <main>
         <div className="small-container">
-          <h1>HTML5 Element Test Page</h1>
+          <H1>HTML5 Element Test Page</H1>
           <p>Common HTML5 elements for CSS testing purposes.</p>
 
-          <h1>Formatting</h1>
+          <H1>Formatting</H1>
 
           <p>
             This sentence is <b>bold</b>. If you like semantics, you might go with
             <strong>strong</strong> or <em>emphasized</em> text. If not, <i>italic</i> is still around.{" "}
             <small>Small</small> text is for fine print. Your copy can also be
             <sub>subscripted</sub> and <sup>superscripted</sup>, <ins>inserted</ins>,<del>deleted</del>, or{" "}
-            <mark>highlighted</mark>. You would use a<a href="#!">hyperlink</a> to go to a new page.
+            <Mark>highlighted</Mark>. You would use a <A href="#!">hyperlink</A> to go to a new page.
           </p>
           <p>
             If you like to write about there are plenty of semantic tags for you. There's the generic
@@ -37,63 +42,63 @@ function App() {
             </p>
           </address>
 
-          <h2>Blockquote</h2>
+          <H2>Blockquote</H2>
 
-          <blockquote>
+          <Blockquote>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam molestiae et assumenda molestias alias
             ut saepe doloribus, porro, deleniti neque, harum minus, commodi laudantium quod excepturi nam corrupti odit
             provident.
             <cite>- Blockquote Citation</cite>
-          </blockquote>
+          </Blockquote>
 
-          <h2>Preformatted Text</h2>
-          <pre>
+          <H2>Preformatted Text</H2>
+          <Pre>
             {`class Voila {
 public:
   // Voila
   static const string VOILA = "Voila";
 }`}
-          </pre>
-          <h2>Horizontal Line</h2>
+          </Pre>
+          <H2>Horizontal Line</H2>
 
           <hr />
 
-          <h1>Headings</h1>
+          <H1>Headings</H1>
 
-          <h1>First Heading h1</h1>
+          <H1>First Heading H1</H1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea delectus cupiditate minima, magni possimus
             commodi, eveniet? Rem, adipisci architecto pariatur libero aliquid culpa sunt accusantium. Ipsa error
             aliquid et! Animi.
           </p>
-          <h2>Second Heading h2</h2>
+          <H2>Second Heading H2</H2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia molestias ullam quasi est a nemo,
             accusamus voluptatum autem. Eius explicabo est assumenda voluptatem id, hic maxime mollitia facere debitis
             quos.
           </p>
-          <h3>Third Heading h3</h3>
+          <H3>Third Heading H3</H3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo deleniti, repudiandae rerum nam laborum
             eligendi aperiam. Autem id, ad necessitatibus accusantium, facilis, quae ullam est, voluptates debitis
             fugiat quos inventore!
           </p>
-          <h4>Fourth Heading h4</h4>
+          <H4>Fourth Heading H4</H4>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque cum eum eligendi voluptatum quasi nisi
             doloremque ipsam unde, laboriosam nihil voluptatem consequatur quam non similique vero ratione animi sit
             veritatis.
           </p>
-          <h5>Fifth Heading h5</h5>
+          <H5>Fifth Heading H5</H5>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatem necessitatibus eos iusto nam
             deserunt, dicta possimus error qui reiciendis, aut dolore magnam eligendi maiores expedita commodi
             perferendis non blanditiis.
           </p>
 
-          <h1>Lists</h1>
+          <H1>Lists</H1>
 
-          <h2>Unordered list</h2>
+          <H2>Unordered list</H2>
 
           <ul>
             <li>
@@ -106,7 +111,7 @@ public:
             <li>List item three</li>
           </ul>
 
-          <h2>Ordered list</h2>
+          <H2>Ordered list</H2>
 
           <ol>
             <li>
@@ -118,7 +123,7 @@ public:
             <li>List item two</li>
             <li>List item three</li>
           </ol>
-          <h2>Definition List</h2>
+          <H2>Definition List</H2>
           <dl>
             <dt>Definition Title One</dt>
             <dd>First definition description</dd>
@@ -126,7 +131,7 @@ public:
             <dd>Second definition description</dd>
           </dl>
 
-          <h1>Tables</h1>
+          <H1>Tables</H1>
 
           <table>
             <thead>
@@ -162,7 +167,7 @@ public:
             </tbody>
           </table>
 
-          <h1>Forms</h1>
+          <H1>Forms</H1>
 
           <form>
             <label htmlFor="text">Text Input</label>
@@ -205,7 +210,7 @@ public:
             <button>Button element</button>
           </form>
 
-          <h2>Fieldset and Legend</h2>
+          <H2>Fieldset and Legend</H2>
 
           <form>
             <fieldset>
@@ -219,11 +224,11 @@ public:
           <footer>
             <p>
               Made to test
-              <a href="https://taniarascia.github.io/primitive/" target="_blank">
+              <A href="https://taniarascia.github.io/primitive/" target="_blank">
                 Primitive
-              </a>{" "}
+              </A>{" "}
               by
-              <a href="https://www.taniarascia.com">Tania Rascia</a>.
+              <A href="https://www.taniarascia.com">Tania Rascia</A>.
             </p>
           </footer>
         </div>
