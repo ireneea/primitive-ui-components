@@ -19,6 +19,13 @@ export const H1 = styled.h1`
   &:not(:first-child) {
     margin-top: 2rem;
   }
+
+  @media ${(props) => props.theme.mobileBreakPoint} {
+    font-size: ${(props) => props.theme.headings.h1Size};
+    &:not(:first-child) {
+      margin-top: 2.5rem;
+    }
+  }
 `;
 
 export const H2 = styled.h2`
@@ -26,6 +33,13 @@ export const H2 = styled.h2`
   font-size: ${(props) => props.theme.headings.h2MobileSize};
   &:not(:first-child) {
     margin-top: 2rem;
+  }
+
+  @media ${(props) => props.theme.mobileBreakPoint} {
+    font-size: ${(props) => props.theme.headings.h2Size};
+    &:not(:first-child) {
+      margin-top: 2.5rem;
+    }
   }
 `;
 
@@ -35,6 +49,13 @@ export const H3 = styled.h3`
   &:not(:first-child) {
     margin-top: 2rem;
   }
+
+  @media ${(props) => props.theme.mobileBreakPoint} {
+    font-size: ${(props) => props.theme.headings.h3Size};
+    &:not(:first-child) {
+      margin-top: 2.5rem;
+    }
+  }
 `;
 
 export const H4 = styled.h4`
@@ -43,6 +64,10 @@ export const H4 = styled.h4`
   &:not(:first-child) {
     margin: 1.5rem 0;
   }
+
+  @media ${(props) => props.theme.mobileBreakPoint} {
+    font-size: ${(props) => props.theme.headings.h4Size};
+  }
 `;
 
 export const H5 = styled.h5`
@@ -50,6 +75,10 @@ export const H5 = styled.h5`
   font-size: ${(props) => props.theme.headings.h5MobileSize};
   &:not(:first-child) {
     margin: 1.5rem 0;
+  }
+
+  @media ${(props) => props.theme.mobileBreakPoint} {
+    font-size: ${(props) => props.theme.headings.h5Size};
   }
 `;
 
