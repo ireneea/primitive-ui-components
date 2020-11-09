@@ -1,8 +1,9 @@
 import styled, { AnyStyledComponent } from "styled-components";
+import { darken } from "polished";
 
 export interface PrimeTheme {
   // TODO: set all the styles correctly
-  font: Record<string, string>;
+  font: FontTheme;
   colors: ColorTheme;
   headings: Record<string, string>;
   spacing: Record<string, string>;
@@ -12,7 +13,32 @@ export interface PrimeTheme {
   mobileBreakPoint: string;
   tabletBreakPoint: string;
   desktopBreakPoint: string;
+  buttons: ButtonTheme;
 }
+
+interface FontTheme {
+  fontSize: string;
+  fontStyle: string;
+  fontVariant: string;
+  fontWeight: string;
+  fontColor: string;
+  fontFamily: string;
+  lineHeight: string;
+  font: string;
+}
+
+const font = {
+  fontSize: "1rem",
+  fontStyle: "normal",
+  fontVariant: "normal",
+  fontWeight: "normal",
+  fontColor: "#404040",
+  fontFamily: "-apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif",
+  lineHeight: "1.6",
+  get font() {
+    return `${this.fontStyle} ${this.fontVariant} ${this.fontWeight} ${this.fontSize}/${this.lineHeight} ${this.fontFamily}`;
+  },
+};
 
 interface ColorTheme {
   background: string;
@@ -62,20 +88,67 @@ const borders = {
   },
 };
 
-const theme: PrimeTheme = {
-  font: {
-    fontSize: "1rem",
-    fontStyle: "normal",
-    fontVariant: "normal",
-    fontWeight: "normal",
-    fontColor: "#404040",
-    fontFamily: "-apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif",
-    lineHeight: "1.6",
-    get font() {
-      const f = `${this.fontStyle} ${this.fontVariant} ${this.fontWeight} ${this.fontSize}/${this.lineHeight} ${this.fontFamily}`;
-      return f;
-    },
+interface ButtonTheme {}
+
+const buttons = {
+  background: colors.primary,
+  color: "#ffffff",
+  fontWeight: "600",
+  fontFamily: "-apple-system, BlinkMacSystemFont, Helvetica Neue, Helvetica, Arial, sans-serif",
+  fontSize: "1rem",
+  borderWidth: "1px",
+  borderStyle: "solid",
+  borderRadius: borders.radius,
+  textTransform: "none",
+  get backgroundHover() {
+    return darken(0.1, this.background);
   },
+
+  get borders() {
+    return `${this.borderWidth} ${this.borderStyle} ${this.background}`;
+  },
+
+  get hoverBorders() {
+    return `${this.borderWidth} ${this.borderStyle} ${darken(0.1, this.background)}`;
+  },
+
+  // accent
+  accentBackground: colors.secondary,
+  accentColor: "#ffffff",
+  accentColorHover: "#ffffff",
+
+  get accentBorders() {
+    return `${this.borderWidth} ${this.borderStyle} ${this.accentBackground}`;
+  },
+  get accentHoverBackground() {
+    return darken(0.1, this.accentBackground);
+  },
+  get accentHoverBorders() {
+    return `${this.borderWidth} ${this.borderStyle} ${darken(0.1, this.accentBackground)}`;
+  },
+
+  // // Muted Buttons
+  mutedBackground: "transparent",
+  mutedColor: darken(0.5, colors.accent),
+  mutedColorHover: darken(0.5, colors.accent),
+  mutedBorderColor: colors.accent,
+
+  get mutedBorders() {
+    return `${this.borderWidth} ${this.borderStyle} ${this.mutedBorderColor}`;
+  },
+  get mutedHoverBackground() {
+    return darken(0.1, this.mutedBackground);
+  },
+  get mutedHoverBorders() {
+    return `${this.borderWidth} ${this.borderStyle} ${darken(0.3, this.mutedBorderColor)}`;
+  },
+
+  // Round Buttons
+  roundButtonRadius: "40px",
+};
+
+const theme: PrimeTheme = {
+  font,
   colors,
   headings: {
     headingFontColor: "#404040",
@@ -124,6 +197,7 @@ const theme: PrimeTheme = {
   get desktopBreakPoint() {
     return `(min-width: ${this.sizes.medium})`;
   },
+  buttons,
 };
 
 export function withDefaultTheme(Component: AnyStyledComponent) {

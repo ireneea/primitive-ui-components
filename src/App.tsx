@@ -18,6 +18,8 @@ import {
   Highlight,
   Blockquote,
   Divider,
+  Button,
+  ButtonInput,
 } from "./components";
 
 function App() {
@@ -220,10 +222,11 @@ public:
             </label>
             <label htmlFor="textarea">Textarea</label>
             <textarea id="textarea" rows={5} cols={30} placeholder="Message"></textarea>
-            <input type="button" value="Button" />
-            <input type="submit" value="Submit" />
-            <input type="reset" value="Reset" />
-            <button>Button element</button>
+            <ButtonInput type="button" value="Button" primary round />
+            <ButtonInput type="submit" value="Submit" muted />
+            <ButtonInput type="reset" value="Reset" />
+            <Button square>Button element</Button>
+            <Button full>Button element</Button>
           </form>
 
           <H2>Fieldset and Legend</H2>
