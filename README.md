@@ -1,5 +1,7 @@
 # Primitive Styled Components
 
+A react components library based on [Primitive](https://taniarascia.github.io/primitive/) by [Tania Rascia](https://www.taniarascia.com)
+
 ## Road Map
 
 ### Done
@@ -12,8 +14,8 @@
 
 ### In Progress
 
+- [ ] Demo Site
 - [ ] Theme preview
-- [ ] Demo
 
 ### To do
 
