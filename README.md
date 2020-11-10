@@ -8,16 +8,17 @@
 - [x] Code
 - [x] Buttons
 - [x] Containers
+- [x] Grid
 
 ### In Progress
 
-- [ ] Grid
-- [ ] Global Styles
-- [ ] Scaffoldings
+- [ ] Theme preview
+- [ ] Demo
 
 ### To do
 
-- [ ] Theme preview
-- [ ] Demo/Documentation Page
+- [ ] Global Styles Refactoring
+- [ ] Documentation
+- [ ] Scaffoldings
 - [ ] Forms
 - [ ] Tables
