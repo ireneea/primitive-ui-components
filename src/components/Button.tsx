@@ -19,9 +19,9 @@ const accent = css`
   &:focus,
   &:active,
   &:hover {
+    color: ${(props) => props.theme.buttons.accentColor};
     border: ${(props) => props.theme.buttons.accentHoverBorders};
     background: ${(props) => props.theme.buttons.accentHoverBackground};
-    text-decoration: none;
   }
 `;
 
@@ -83,9 +83,9 @@ const btnStyle = css<ButtonProps>`
   &:focus,
   &:active,
   &:hover {
+    color: ${(props) => props.theme.buttons.color};
     border: ${(props) => props.theme.buttons.hoverBorders};
     background: ${(props) => props.theme.buttons.backgroundHover};
-    text-decoration: none;
   }
 
   /* Variants */
