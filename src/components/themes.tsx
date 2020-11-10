@@ -14,6 +14,7 @@ export interface PrimeTheme {
   tabletBreakPoint: string;
   desktopBreakPoint: string;
   buttons: ButtonTheme;
+  grids: GridTheme;
 }
 
 interface FontTheme {
@@ -147,6 +148,16 @@ const buttons = {
   roundButtonRadius: "40px",
 };
 
+interface GridTheme {
+  padding: string;
+  bottomMargin: string;
+}
+
+const grids = {
+  padding: "1rem",
+  bottomMargin: "1rem",
+};
+
 const theme: PrimeTheme = {
   font,
   colors,
@@ -198,6 +209,7 @@ const theme: PrimeTheme = {
     return `(min-width: ${this.sizes.medium})`;
   },
   buttons,
+  grids,
 };
 
 export function withDefaultTheme(Component: AnyStyledComponent) {

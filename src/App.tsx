@@ -20,6 +20,8 @@ import {
   Divider,
   Button,
   ButtonInput,
+  GridRow,
+  GridCell,
 } from "./components";
 
 function App() {
@@ -113,6 +115,25 @@ public:
             deserunt, dicta possimus error qui reiciendis, aut dolore magnam eligendi maiores expedita commodi
             perferendis non blanditiis.
           </p>
+
+          <Section>
+            <H1>Grids</H1>
+
+            <GridRow>
+              <GridCell>Large 1</GridCell>
+              <GridCell>Large 2</GridCell>
+            </GridRow>
+
+            <GridRow>
+              <GridCell size="oneThird">1/3</GridCell>
+              <GridCell size="twoThirds">2/3</GridCell>
+            </GridRow>
+
+            <GridRow>
+              <GridCell breakpoint="small">Small 1</GridCell>
+              <GridCell breakpoint="small">Small 2</GridCell>
+            </GridRow>
+          </Section>
 
           <H1>Lists</H1>
 
