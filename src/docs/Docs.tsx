@@ -20,7 +20,7 @@ export default function Docs() {
         </p>
 
         <p>
-          For now is only available in demo only version but the source code can found on{" "}
+          For now this is only available in demo only version but the source code can found on{" "}
           <Link href="https://github.com/ireneea/primitive-ui-components" target="_blank">
             GitHub
           </Link>
