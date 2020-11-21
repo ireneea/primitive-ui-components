@@ -4,6 +4,7 @@ import { H1, H2, Container, Section, Link, GlobalStyle } from "Primitive";
 
 import { GlobalStyleDemo } from "./GlobalStyleDemo";
 import { LayoutDemo } from "./LayoutDemo";
+import { HeadingDemo } from "./HeadingDemo";
 
 export default function Docs() {
   return (
@@ -29,11 +30,7 @@ export default function Docs() {
 
         <GlobalStyleDemo />
         <LayoutDemo />
-
-        <Section>
-          <H2>Headings</H2>
-          <p>Documentation coming soon</p>
-        </Section>
+        <HeadingDemo />
 
         <Section>
           <H2>Buttons</H2>
