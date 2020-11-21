@@ -1,13 +1,13 @@
 import styled, { css } from "styled-components";
-import { PrimeTheme, withDefaultTheme } from "./themes";
-import { baseFont } from "./mixins";
+import { PrimeTheme, withDefaultTheme } from "../themes";
+import { baseFont } from "../mixins";
 
 interface ContainerProps {
   theme: PrimeTheme;
   size?: "small" | "medium" | "large" | "full";
 }
 
-const StyledDiv = styled.div<ContainerProps>`
+export const Container = withDefaultTheme(styled.div<ContainerProps>`
   ${baseFont}
   max-width: ${(props) => {
     let maxWidth;
@@ -35,13 +35,4 @@ const StyledDiv = styled.div<ContainerProps>`
           margin-left: auto;
           margin-right: auto;
         `}
-`;
-
-export const Container = withDefaultTheme(StyledDiv);
-
-const StyledSection = styled.section`
-  ${baseFont}
-  padding: ${(props) => props.theme.spacing.contentPaddingMobile};
-`;
-
-export const Section = withDefaultTheme(StyledSection);
+`);
