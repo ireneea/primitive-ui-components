@@ -2,7 +2,8 @@ import React from "react";
 
 import { H1, H2, Container, Section, Link, GlobalStyle } from "Primitive";
 
-import { GlobalStyleDemo } from "Primitive/GlobalStyle";
+import { GlobalStyleDemo } from "./GlobalStyleDemo";
+import { LayoutDemo } from "./LayoutDemo";
 
 export default function Docs() {
   return (
@@ -26,20 +27,8 @@ export default function Docs() {
           </Link>
         </p>
 
-        <Section>
-          <H2>Global Styles</H2>
-          <GlobalStyleDemo />
-        </Section>
-
-        <Section>
-          <H2>Containers</H2>
-          <p>Documentation coming soon</p>
-        </Section>
-
-        <Section>
-          <H2>Grid</H2>
-          <p>Documentation coming soon</p>
-        </Section>
+        <GlobalStyleDemo />
+        <LayoutDemo />
 
         <Section>
           <H2>Headings</H2>

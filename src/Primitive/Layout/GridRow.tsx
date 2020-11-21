@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { withDefaultTheme } from "../themes";
 
 export const GridRow = withDefaultTheme(

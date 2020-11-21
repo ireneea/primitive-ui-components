@@ -1,8 +1,9 @@
 import React from "react";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { okaidia } from "react-syntax-highlighter/dist/esm/styles/prism";
 
-import { Link } from "../Scaffolding";
+import { JsxCode } from "./JsxCode";
+
+import { Link } from "Primitive";
+import { DocSection } from "./DocSection";
 
 const snippet = `
 import { GlobalStyle } from 'Primitive'
@@ -16,7 +17,7 @@ const App = () => (
 `;
 
 export const GlobalStyleDemo = () => (
-  <>
+  <DocSection title="Global Styles">
     <p>
       It is recommanded to use the GlobalStyle component to apply CSS Normalisation and CSS Resets. To learn more
       checkout{" "}
@@ -25,8 +26,6 @@ export const GlobalStyleDemo = () => (
       </Link>
     </p>
 
-    <SyntaxHighlighter language="jsx" style={okaidia}>
-      {snippet}
-    </SyntaxHighlighter>
-  </>
+    <JsxCode snippet={snippet} />
+  </DocSection>
 );
