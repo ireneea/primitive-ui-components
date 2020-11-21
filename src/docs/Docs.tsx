@@ -5,6 +5,8 @@ import { H1, H2, Container, Section, Link, GlobalStyle } from "Primitive";
 import { GlobalStyleDemo } from "./GlobalStyleDemo";
 import { LayoutDemo } from "./LayoutDemo";
 import { HeadingDemo } from "./HeadingDemo";
+import { ButtonDemo } from "./ButtonDemo";
+import { CodeDemo } from "./CodeDemo";
 
 export default function Docs() {
   return (
@@ -31,16 +33,8 @@ export default function Docs() {
         <GlobalStyleDemo />
         <LayoutDemo />
         <HeadingDemo />
-
-        <Section>
-          <H2>Buttons</H2>
-          <p>Documentation coming soon</p>
-        </Section>
-
-        <Section>
-          <H2>Code</H2>
-          <p>Documentation coming soon</p>
-        </Section>
+        <ButtonDemo />
+        <CodeDemo />
 
         <Section>
           <H2>Theme</H2>
