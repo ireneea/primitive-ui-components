@@ -4,7 +4,7 @@ import { baseFont } from "./mixins";
 
 interface ButtonProps {
   theme: PrimeTheme;
-  primary?: boolean;
+  accent?: boolean;
   muted?: boolean;
   round?: boolean;
   square?: boolean;
@@ -64,7 +64,7 @@ const btnStyle = css<ButtonProps>`
   font-size: ${(props) => props.theme.buttons.fontSize};
   text-transform: ${(props) => props.theme.buttons.textTransform};
   padding: 0.75rem 1.25rem;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0.1rem 0.5rem 0.1rem;
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
@@ -89,8 +89,8 @@ const btnStyle = css<ButtonProps>`
   }
 
   /* Variants */
-  ${(props) => (props.primary ? accent : "")}
   ${(props) => (props.muted ? muted : "")}
+  ${(props) => (props.accent ? accent : "")}
   ${(props) => (props.round ? round : "")}
   ${(props) => (props.square ? square : "")}
   ${(props) => (props.full ? full : "")}

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { H1, H2, Container, Section, Link, GlobalStyle } from "Primitive";
+import { H1, Container, Link, GlobalStyle } from "Primitive";
 
 import { GlobalStyleDemo } from "./GlobalStyleDemo";
 import { LayoutDemo } from "./LayoutDemo";
@@ -12,7 +12,7 @@ export default function Docs() {
   return (
     <>
       <GlobalStyle />
-      <Container>
+      <Container size="large">
         <H1>Primitive UI Components</H1>
         <p>
           React components based on{" "}
@@ -35,11 +35,6 @@ export default function Docs() {
         <HeadingDemo />
         <ButtonDemo />
         <CodeDemo />
-
-        <Section>
-          <H2>Theme</H2>
-          <p>Documentation coming soon</p>
-        </Section>
       </Container>
     </>
   );
