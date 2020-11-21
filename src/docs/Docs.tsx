@@ -2,7 +2,7 @@ import React from "react";
 
 import { H1, H2, Container, Section, Link, GlobalStyle } from "Primitive";
 
-import GlobalStyleDemo from "Primitive/GlobalStyle/Demo";
+import { Demo as GlobalStyleDemo } from "Primitive/GlobalStyle";
 
 export default function Docs() {
   return (

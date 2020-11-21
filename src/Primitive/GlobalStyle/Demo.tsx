@@ -15,20 +15,18 @@ const App = () => (
 );
 `;
 
-export default function Demo() {
-  return (
-    <>
-      <p>
-        It is recommanded to use the GlobalStyle component to apply CSS Normalisation and CSS Resets. To learn more
-        checkout{" "}
-        <Link href="https://medium.com/@elad/normalize-css-or-css-reset-9d75175c5d1e" target="_blank">
-          Normalize CSS or CSS Reset?!
-        </Link>
-      </p>
+export const Demo = () => (
+  <>
+    <p>
+      It is recommanded to use the GlobalStyle component to apply CSS Normalisation and CSS Resets. To learn more
+      checkout{" "}
+      <Link href="https://medium.com/@elad/normalize-css-or-css-reset-9d75175c5d1e" target="_blank">
+        Normalize CSS or CSS Reset?!
+      </Link>
+    </p>
 
-      <SyntaxHighlighter language="jsx" style={okaidia}>
-        {snippet}
-      </SyntaxHighlighter>
-    </>
-  );
-}
+    <SyntaxHighlighter language="jsx" style={okaidia}>
+      {snippet}
+    </SyntaxHighlighter>
+  </>
+);
