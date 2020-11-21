@@ -1,2 +1,2 @@
 export * from "./GlobalStyle";
-export * from "./Demo";
+export * from "./GlobalStyleDemo";

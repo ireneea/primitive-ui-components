@@ -15,7 +15,7 @@ const App = () => (
 );
 `;
 
-export const Demo = () => (
+export const GlobalStyleDemo = () => (
   <>
     <p>
       It is recommanded to use the GlobalStyle component to apply CSS Normalisation and CSS Resets. To learn more
